@@ -17,7 +17,10 @@ class _MyAppState extends State<MyApp> {
 
   void incIndex() {
     setState(() {
-      index++;
+      if(index < 2)
+        index++;
+      else
+        index = -1;
     });
   }
 
@@ -32,9 +35,7 @@ class _MyAppState extends State<MyApp> {
         ),
         body: (index == -1)
             ? HomeScreen(incIndex)
-            : (index < 2)
-                ? GamePage(index, incIndex)
-                : Result("Player"),
+            : GamePage(index, incIndex)
       ),
     );
   }

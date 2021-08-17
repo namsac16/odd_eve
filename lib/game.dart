@@ -3,6 +3,7 @@ import 'dart:math';
 
 import './card.dart';
 import './rows.dart';
+import './result.dart';
 
 class GamePage extends StatefulWidget {
   final int index;
@@ -23,6 +24,8 @@ class _GamePageState extends State<GamePage> {
   final List<int> numbers = [0, 1, 2, 3, 4, 5, 6, 10, 20];
   final _random = new Random();
 
+  String winner;
+
   void incScore(int score) {
     setState(() {
       if (widget.index == 0)
@@ -37,8 +40,26 @@ class _GamePageState extends State<GamePage> {
       playerChoice = choice;
       int choice1 = numbers[_random.nextInt(numbers.length)];
       compChoice = choice1;
-      if (playerChoice == compChoice) 
-        widget.indexHandler();
+      if (playerChoice == compChoice)
+      {
+        if(widget.index == 0)
+          widget.indexHandler();
+        else
+        {
+          if(scores[0] > scores[1])
+            winner = players[0];
+          else if(scores[0] < scores[1])
+            winner = players[1];
+          else
+            winner = "Tie";
+          Result(winner, widget.indexHandler);
+        }
+      }
+      else if(scores[1] > scores[0])
+      {
+        winner = players[1];
+        Result(winner, widget.indexHandler);
+      }
     });
   }
 

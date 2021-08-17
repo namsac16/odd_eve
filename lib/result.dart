@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class Result extends StatelessWidget {
   final String winner;
+  final Function indexHandler;
 
-  Result(this.winner);
+  Result(this.winner, this.indexHandler);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +30,7 @@ class Result extends StatelessWidget {
               ),
               SizedBox(height: 10),
               TextButton(
-                onPressed: () {},
+                onPressed: indexHandler,
                 child: Text(
                   "Play Again",
                   style: TextStyle(
