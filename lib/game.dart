@@ -3,12 +3,12 @@ import 'dart:math';
 
 import './card.dart';
 import './rows.dart';
-import './result.dart';
 
 class GamePage extends StatefulWidget {
   final int index;
   final Function indexHandler;
-  GamePage(this.index, this.indexHandler);
+  final Function winnerHandler;
+  GamePage(this.index, this.indexHandler, this.winnerHandler);
 
   @override
   _GamePageState createState() => _GamePageState();
@@ -30,8 +30,7 @@ class _GamePageState extends State<GamePage> {
     setState(() {
       if (widget.index == 0)
         scores[widget.index] += score;
-      else if (widget.index == 1) 
-        scores[widget.index] += compChoice;
+      else if (widget.index == 1) scores[widget.index] += compChoice;
     });
   }
 
@@ -40,25 +39,24 @@ class _GamePageState extends State<GamePage> {
       playerChoice = choice;
       int choice1 = numbers[_random.nextInt(numbers.length)];
       compChoice = choice1;
-      if (playerChoice == compChoice)
-      {
-        if(widget.index == 0)
+      if (playerChoice == compChoice) {
+        if (widget.index == 0)
           widget.indexHandler();
-        else
-        {
-          if(scores[0] > scores[1])
+        else {
+          if (scores[0] > scores[1])
             winner = players[0];
-          else if(scores[0] < scores[1])
+          else if (scores[0] < scores[1])
             winner = players[1];
           else
             winner = "Tie";
-          Result(winner, widget.indexHandler);
+          widget.winnerHandler(winner, scores[0], scores[1]);
+          widget.indexHandler();
         }
       }
-      else if(scores[1] > scores[0])
-      {
+      if (scores[1] > scores[0]) {
         winner = players[1];
-        Result(winner, widget.indexHandler);
+        widget.winnerHandler(winner, scores[0], scores[1]);
+        widget.indexHandler();
       }
     });
   }

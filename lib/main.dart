@@ -12,12 +12,19 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   int index = -1;
+  int playerScore, compScore;
+  String winner;
+
+  void setWinner(String win, int pScore, int cScore) {
+    winner = win;
+    playerScore = pScore;
+    compScore = cScore;
+  }
 
   void incIndex() {
     setState(() {
-      if(index < 2)
+      if (index < 2)
         index++;
       else
         index = -1;
@@ -35,7 +42,9 @@ class _MyAppState extends State<MyApp> {
         ),
         body: (index == -1)
             ? HomeScreen(incIndex)
-            : GamePage(index, incIndex)
+            : (index < 2)
+                ? GamePage(index, incIndex, setWinner)
+                : Result(incIndex, winner, playerScore, compScore),
       ),
     );
   }

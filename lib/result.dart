@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 class Result extends StatelessWidget {
-  final String winner;
   final Function indexHandler;
+  final String winner;
+  final int pScore;
+  final int cScore;
 
-  Result(this.winner, this.indexHandler);
+  Result(this.indexHandler, this.winner, this.pScore, this.cScore);
 
   @override
   Widget build(BuildContext context) {
@@ -20,13 +22,38 @@ class Result extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              winner == "Tie"
+                  ? Text(
+                      "The Game is Tied",
+                      style: TextStyle(
+                          fontSize: 30.0,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.purple[500]),
+                    )
+                  : Text(
+                      "$winner wins this Game",
+                      style: TextStyle(
+                          fontSize: 30.0,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.purple[500]),
+                    ),
+              SizedBox(height: 5),
               Text(
-                "$winner wins this Game",
+                "Player Score: $pScore",
                 style: TextStyle(
-                    fontSize: 30.0,
-                    fontStyle: FontStyle.italic,
+                    fontSize: 25.0,
                     fontWeight: FontWeight.bold,
-                    color: Colors.purple[500]),
+                    color: Colors.pink[500]),
+              ),
+              SizedBox(height: 5),
+              Text(
+                "Computer Score: $cScore",
+                style: TextStyle(
+                    fontSize: 25.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.pink[500]),
               ),
               SizedBox(height: 10),
               TextButton(
