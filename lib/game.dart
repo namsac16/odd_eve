@@ -37,8 +37,7 @@ class _GamePageState extends State<GamePage> {
   void choices(int choice) {
     setState(() {
       playerChoice = choice;
-      int choice1 = numbers[_random.nextInt(numbers.length)];
-      compChoice = choice1;
+      compChoice = numbers[_random.nextInt(numbers.length)];
       if (playerChoice == compChoice) {
         if (widget.index == 0)
           widget.indexHandler();
@@ -52,6 +51,9 @@ class _GamePageState extends State<GamePage> {
           widget.winnerHandler(winner, scores[0], scores[1]);
           widget.indexHandler();
         }
+      }
+      else{
+        incScore(choice);
       }
       if (scores[1] > scores[0]) {
         winner = players[1];
@@ -79,11 +81,11 @@ class _GamePageState extends State<GamePage> {
               backColor: Colors.brown[100],
               textColor: Colors.brown[900]),
           SizedBox(height: 15),
-          RowButtons(['0', '1', '2'], incScore, choices),
+          RowButtons(['0', '1', '2'], choices),
           SizedBox(height: 15),
-          RowButtons(['3', '4', '5'], incScore, choices),
+          RowButtons(['3', '4', '5'], choices),
           SizedBox(height: 15),
-          RowButtons(['6', '10', '20'], incScore, choices),
+          RowButtons(['6', '10', '20'], choices),
           SizedBox(height: 15),
           Container(
             width: double.infinity,
