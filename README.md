@@ -32,19 +32,16 @@ latest release
 ## Screenshots
 
 - Home Screen
-
-    ![Home Screen](https://github.com/namsac16/odd_eve/blob/main/screenshots/Home%20Screen.jpg)
+    
+    <p align="center" ><img src="https://github.com/namsac16/odd_eve/blob/main/screenshots/Home%20Screen.jpg" heigth="250"></p>
 
 - Game Screen
 
-    ![Game Screen](https://github.com/namsac16/odd_eve/blob/main/screenshots/Game%20Screen.jpg)
+    <p align="center" ><img src="https://github.com/namsac16/odd_eve/blob/main/screenshots/Game%20Screen.jpg" heigth="250"></p>
 
 - Result Screen
 
-    ![Result Sceen](https://github.com/namsac16/odd_eve/blob/main/screenshots/Result%20Screen.jpg)
-
-  
-## Demo
+    <p align="center" ><img src="https://github.com/namsac16/odd_eve/blob/main/screenshots/Result%20Screen.jpg" heigth="250"></p>
 
   
 ## Feedback
