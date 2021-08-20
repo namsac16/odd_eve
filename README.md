@@ -33,15 +33,15 @@ latest release
 
 - Home Screen
     
-    <p align="center" ><img src="https://github.com/namsac16/odd_eve/blob/main/screenshots/Home%20Screen.jpg" heigth="250"></p>
+    <p align="center" ><img src="https://github.com/namsac16/odd_eve/blob/main/screenshots/Home%20Screen.jpg" heigth="100"></p>
 
 - Game Screen
 
-    <p align="center" ><img src="https://github.com/namsac16/odd_eve/blob/main/screenshots/Game%20Screen.jpg" heigth="250"></p>
+    <p align="center" ><img src="https://github.com/namsac16/odd_eve/blob/main/screenshots/Game%20Screen.jpg" heigth="100"></p>
 
 - Result Screen
 
-    <p align="center" ><img src="https://github.com/namsac16/odd_eve/blob/main/screenshots/Result%20Screen.jpg" heigth="250"></p>
+    <p align="center" ><img src="https://github.com/namsac16/odd_eve/blob/main/screenshots/Result%20Screen.jpg" heigth="100"></p>
 
   
 ## Feedback
