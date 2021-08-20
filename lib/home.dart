@@ -27,15 +27,6 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 20),
-                  // MaterialButton(
-                  //   color: Colors.indigoAccent,
-                  //   minWidth: 100,
-                  //   onPressed: indexHandler,
-                  //   child: Text(
-                  //     "Play",
-                  //     style: TextStyle(color: Colors.white),
-                  //   ),
-                  // ),
                 ],
               ),
             ),
@@ -65,7 +56,10 @@ class HomeScreen extends StatelessWidget {
         width: 100,
         child: FloatingActionButton(
           onPressed: indexHandler,
-          child: Text("Play"),
+          child: Text(
+            "Play",
+            style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+          ),
           backgroundColor: Colors.black,
           foregroundColor: Colors.amber,
           shape: BeveledRectangleBorder(),

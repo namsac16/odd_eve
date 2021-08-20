@@ -35,12 +35,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.blueGrey),
       home: Scaffold(
-        // appBar: AppBar(
-        //   title: Text("ODD EVE"),
-        //   centerTitle: true,
-        // ),
         body: (index == -1)
             ? HomeScreen(incIndex)
             : (index < 2)
