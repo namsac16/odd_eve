@@ -33,15 +33,15 @@ latest release
 
 - Home Screen
 
-    ![Home Screen]()
+    ![Home Screen](https://github.com/namsac16/odd_eve/blob/main/screenshots/Home%20Screen.jpg)
 
 - Game Screen
 
-    ![Game Screen]()
+    ![Game Screen](https://github.com/namsac16/odd_eve/blob/main/screenshots/Game%20Screen.jpg)
 
 - Result Screen
 
-    ![Result Sceen]()
+    ![Result Sceen](https://github.com/namsac16/odd_eve/blob/main/screenshots/Result%20Screen.jpg)
 
   
 ## Demo
