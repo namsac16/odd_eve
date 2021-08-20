@@ -17,7 +17,8 @@ class RowButtons extends StatelessWidget {
           },
           child: Text(buttons[0]),
           style: ElevatedButton.styleFrom(
-            primary: Colors.blue[900],
+            primary: Colors.black,
+            onPrimary: Colors.amber,
           ),
         ),
         ElevatedButton(
@@ -26,7 +27,8 @@ class RowButtons extends StatelessWidget {
           },
           child: Text(buttons[1]),
           style: ElevatedButton.styleFrom(
-            primary: Colors.blue[900],
+            primary: Colors.black,
+            onPrimary: Colors.amber,
           ),
         ),
         ElevatedButton(
@@ -35,7 +37,8 @@ class RowButtons extends StatelessWidget {
           },
           child: Text(buttons[2]),
           style: ElevatedButton.styleFrom(
-            primary: Colors.blue[900],
+            primary: Colors.black,
+            onPrimary: Colors.amber,
           ),
         ),
       ],

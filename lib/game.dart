@@ -27,15 +27,15 @@ class _GamePageState extends State<GamePage> {
     setState(() {
       switch (choice) {
         case -1:
-        {
-          message = "And That's OUT!";
-          break;
-        }
+          {
+            message = "And That's OUT!";
+            break;
+          }
         case 0:
-        {
-          message = "Well Defended";
-          break;
-        }
+          {
+            message = "Well Defended";
+            break;
+          }
         case 1:
           {
             message = "Just a Single";
@@ -72,10 +72,10 @@ class _GamePageState extends State<GamePage> {
             break;
           }
         case 20:
-        {
-          message = "TWENTY RUNS!!!!!";
-          break;
-        }
+          {
+            message = "TWENTY RUNS!!!!!";
+            break;
+          }
       }
     });
   }
@@ -126,38 +126,17 @@ class _GamePageState extends State<GamePage> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.only(top: 30.0),
       width: double.infinity,
-      color: Colors.blueGrey[100],
+      color: Colors.amber,
       child: ListView(
         children: [
           CardWidget(
               text: players[0],
               score: scores[0],
-              backColor: Colors.green[100],
-              textColor: Colors.green[900]),
-          Container(
-            color: Colors.amber[50],
-            child: Text(
-              "$message",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  color: Colors.purple,
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.bold),
-            ),
-          ),
-          CardWidget(
-              text: players[1],
-              score: scores[1],
-              backColor: Colors.brown[100],
-              textColor: Colors.brown[900]),
-          SizedBox(height: 10),
-          RowButtons(['0', '1', '2'], choices),
-          SizedBox(height: 10),
-          RowButtons(['3', '4', '5'], choices),
-          SizedBox(height: 10),
-          RowButtons(['6', '10', '20'], choices),
-          SizedBox(height: 10),
+              backColor: Colors.black,
+              textColor: Colors.amber),
+          SizedBox(height: 5.0),
           Container(
             width: double.infinity,
             child: Text(
@@ -166,11 +145,10 @@ class _GamePageState extends State<GamePage> {
               style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
-                  color: Colors.pink),
+                  color: Colors.black),
             ),
-            color: Colors.lightBlue[50],
           ),
-          SizedBox(height: 15.0),
+          SizedBox(height: 5.0),
           Container(
             width: double.infinity,
             child: Text(
@@ -179,10 +157,34 @@ class _GamePageState extends State<GamePage> {
               style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
-                  color: Colors.lightBlue),
+                  color: Colors.black),
             ),
-            color: Colors.pink[50],
-          )
+          ),
+          SizedBox(height: 5.0),
+          CardWidget(
+              text: players[1],
+              score: scores[1],
+              backColor: Colors.black,
+              textColor: Colors.amber),
+          SizedBox(height: 15),
+          RowButtons(['0', '1', '2'], choices),
+          SizedBox(height: 15),
+          RowButtons(['3', '4', '5'], choices),
+          SizedBox(height: 15),
+          RowButtons(['6', '10', '20'], choices),
+          SizedBox(height: 45),
+          Container(
+            padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
+            color: Colors.black,
+            child: Text(
+              "$message",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Colors.amber,
+                  fontSize: 30.0,
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
         ],
       ),
     );
