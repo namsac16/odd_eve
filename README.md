@@ -1,16 +1,60 @@
-# odd_eve
 
-A new Flutter project.
+# Odd Eve Game
 
-## Getting Started
+#### About Game
+Odd Eve Game is a pretty common party game highly popular among kids.
+This Project is build on the Cricket-Based Version of the Game 
+played generally between two players.
+Each Player's Runs are calculated on the basis of total sum of fingers chosen in
+each chance while the Player has its turn. The Player is declared Out
+when both the Players playing offers the same number of fingers.
+You can read more about the app here : [Odds & Evens - Wikipedia](https://en.wikipedia.org/wiki/Odds_and_evens_(hand_game))
 
-This project is a starting point for a Flutter application.
+#### About App
+This Application is built to replicate the above-mentioned Game where
+you can compete with the Computer and enjoy the fun of this mini-game
+for entertainment and time-pass. Instead of choosing fingers, Player
+presses buttons to choose his number and increase his Score. This app is built in the Flutter framework using the Dart language to 
+handle cross-platform availability of the app.
+## Installation
 
-A few resources to get you started if this is your first Flutter project:
+Install Odd Eve Game by downloading its .apk file from the 
+latest release
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+    
+## Tech Stack
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**Package Used:** Flutter
+
+**Language Used:** Dart
+
+  
+## Screenshots
+
+- Home Screen
+
+    ![Home Screen]()
+
+- Game Screen
+
+    ![Game Screen]()
+
+- Result Screen
+
+    ![Result Sceen]()
+
+  
+## Demo
+
+  
+## Feedback
+
+If you have any feedback, please reach out to me at 
+- [LinkedIn](https://www.linkedin.com/in/naman-sachdeva-9151b5208/)
+- [G-Mail](mailto:namansachdeva160201@gmail.com)
+  
+## Authors
+
+- [@namsac16](https://www.github.com/namsac16)
+
+  
