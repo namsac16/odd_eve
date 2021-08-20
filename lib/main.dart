@@ -37,10 +37,10 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blueGrey),
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("ODD EVE"),
-          centerTitle: true,
-        ),
+        // appBar: AppBar(
+        //   title: Text("ODD EVE"),
+        //   centerTitle: true,
+        // ),
         body: (index == -1)
             ? HomeScreen(incIndex)
             : (index < 2)
